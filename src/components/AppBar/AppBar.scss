@@ -1,0 +1,52 @@
+@import '../../styles/colors.scss';
+@import '../../styles/fonts.scss';
+
+.topbar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 16px;
+
+  .hapu-logo-badge {
+    position: absolute;
+    top: 0;
+    padding: 29px 13px 10px 13px;
+    border-radius: 0px 0px 32px 32px;
+    background-color: $green-700;
+  }
+
+  nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-size: $font-size-sm
+  }
+
+  a {
+    text-decoration: none;
+    text-transform: capitalize;
+    color: $white;
+
+    & + a {
+      margin-left: 32px;
+    }
+
+    &:first-child {
+      margin-left: 6rem;
+    }
+  }
+
+  button {
+    & + a {
+      margin-left: 23px;
+      margin-right: 16px;
+    }
+  }
+  
+  @media(max-width: 850px) {
+    a {
+      display: none;
+    }
+  }
+}
+

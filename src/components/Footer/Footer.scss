@@ -1,0 +1,131 @@
+@import '../../styles/colors.scss';
+@import '../../styles/fonts.scss';
+
+footer {
+  padding: 5rem 8rem 2rem;
+  text-align: center;
+  background-color: $white;
+
+  h3 {
+    font-size: $font-size-xxl;
+    font-weight: $font-weight-bold;
+    line-height: 32px;
+  }
+
+  p {
+    margin-top: 1rem;
+  }
+
+  button.create-nanny-share {
+    display: flex;
+    align-items: center;
+    gap: 21px;
+    margin: 2rem auto 1.5rem;
+    padding: 19px 25px;
+    background: $secondary;
+    text-align: left;
+
+    h5 {
+      font-weight: lighter;
+      font-size: $font-size-md;
+    }
+
+    p {
+      font-size: $font-size-xs;
+      margin-top: 2px;
+    }
+  }
+
+  .links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 82px;
+    margin-bottom: 90px;
+
+    .extra-links {
+      display: flex;    
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      
+      a {
+        font-size: $font-size-sm;
+        font-weight: $font-weight-bold;
+        text-decoration: none;
+        color: $grey-700;
+        margin: 0 15px;
+      }
+    }
+
+    .social-media {
+      display: flex;
+      gap: 1rem;
+
+      a {
+        display: inherit;
+        padding: 14px;
+        border: 1px solid $grey-300;
+        border-radius: 50%;
+
+        img {
+          width: 18px;
+          aspect-ratio: 1;
+        }
+      }
+    }
+  }
+  
+  .divider {
+    display: none;
+  }
+  
+  .copyright {
+    font-size: $font-size-xs;
+    text-decoration: none;
+    color: $grey-700;
+    opacity: 0.6;
+  }
+  
+  @media(max-width: 960px) {  
+    padding: 2.5rem 1.5rem 1.5rem;
+    
+    h3 {
+      font-size: $font-size-xl;
+    }
+
+    p {
+      margin-top: unset;
+      font-size: $font-size-md;
+    }
+
+    button.create-nanny-share {
+      margin-top: 1.5rem; 
+    }
+
+    .links {
+      flex-direction: column;
+
+      .extra-links {
+        margin-top: 2rem;
+
+        a {
+          margin-right: 2rem;
+          line-height: 2rem;
+        }
+      }
+
+      .social-media {
+        margin-top: 1.5rem;
+      }
+    }
+
+    .divider {
+      display: block;
+    }
+
+    .copyright {
+      margin-top: 1.5rem;
+    }
+  }
+}

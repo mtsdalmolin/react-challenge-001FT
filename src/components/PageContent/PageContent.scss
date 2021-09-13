@@ -1,0 +1,247 @@
+@import '../../styles/colors.scss';
+@import '../../styles/fonts.scss';
+
+main {
+  margin: 0 8rem;
+
+  section[role=content],
+  section[role=payments],
+  section[role=billing-history],
+  section[role=coming-soon] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3.5rem;
+    padding: 7.5rem 0;
+  
+    article {
+      display: grid;
+      gap: 2.5rem;
+  
+      h3 {
+        width: 15ch;
+        font-size: $font-size-xxl;
+        line-height: 2rem;
+        color: $grey-700;
+      }
+  
+      a, p {
+        font-size: $font-size-md;
+        line-height: 1.75rem;
+      }
+  
+      p {
+        color: $grey-600;
+        max-width: 48ch;
+      }
+  
+      a {
+        font-weight: $font-weight-bold;
+      }
+  
+    }
+  
+    img {
+      width: 50%;
+      max-width: 36.5rem;
+    }
+  }
+  
+  section[role=newsletter] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 4rem 0;
+    text-align: center;
+    color: $grey-700;
+  
+    h4 {
+      font-size: $font-size-xl;
+      line-height: 2rem;
+    }
+  
+    p {
+      font-size: $font-size-lg;
+      line-height: 1.5rem;
+    }
+  
+    form {
+      margin-top: 58px;
+  
+      * + * {
+        margin-left: .75rem;
+      }
+  
+      input {
+        width: 14.5rem;
+        padding: 14px 20px;
+        font-size: $font-size-sm;
+        background: $white;
+        border: 1px solid $grey-300;
+        box-sizing: border-box;
+        border-radius: 4px;
+      }
+  
+      button {
+        padding: 14px 30px;
+      }
+    }
+  }
+
+  section[role=payments] {
+    align-items: flex-start;
+    padding: 6rem 0;
+
+    img {
+      max-width: 28.5rem;
+    }
+
+    article {
+      h3 {
+        width: unset;
+      }
+    }
+  }
+  
+  section[role=billing-history],
+  section[role=coming-soon] {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    padding: 6rem 0;
+    text-align: center;
+
+    * > * {
+      margin: auto;
+    }
+
+    img {
+      margin-top: 4rem;
+      width: unset;
+      max-width: min(70vw, 61.5rem);
+    }
+
+    article {
+      h3 {
+        width: unset;
+      }
+
+      p {
+        max-width: min(55vw, 105ch);
+      }
+    }
+  }
+  
+  section[role=coming-soon] {
+    img {
+      margin-top: unset;
+    }
+  }
+
+  @media(max-width: 960px) {
+    margin: 0 1rem;
+
+    section[role=content],
+    section[role=newsletter],
+    section[role=payments],
+    section[role=billing-history],
+    section[role=coming-soon] {
+      padding: 4rem 1rem;
+  
+      article {
+        h3 {
+          width: unset;
+          font-size: $font-size-xl;
+        }
+      }
+    }
+
+    section[role=content],
+    section[role=payments] {
+      flex-direction: column-reverse;
+      text-align: center;
+  
+      article {    
+        gap: 1.5rem;
+    
+        a, p {
+          font-size: $font-size-md;
+          line-height: 1.75rem;
+        }
+    
+        p {
+          color: $grey-600;
+        }
+    
+        a {
+          font-weight: $font-weight-bold;
+        }
+    
+      }
+  
+      img {
+        width: 100%;
+      }
+    }
+
+    section[role=newsletter] {
+      p {
+        font-size: $font-size-md;
+        line-height: 1.75rem;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+        margin-top: 2rem;
+        
+        * + * {
+          margin-left: 0;
+        }
+
+        button, input {
+          width: min(100%, 25rem);
+        }
+
+        button {
+          margin-top: 6px;
+        }
+      }
+    }
+
+    section[role=payments] {
+      flex-direction: column;
+      text-align: center;
+
+      & > * {
+        margin: auto;
+      }
+      
+      article {
+        p {
+          max-width: unset;
+        }
+      }
+    }
+    
+    section[role=billing-history]{
+      img {
+        display: none;
+      }
+    }
+
+    section[role=billing-history],
+    section[role=coming-soon] {
+      article {
+        p {
+          max-width: unset;
+        }
+      }
+    }
+  }
+}

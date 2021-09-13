@@ -1,0 +1,48 @@
+@import '../../styles/colors.scss';
+@import '../../styles/fonts.scss';
+
+section[role=rectangle] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+  padding: 1.75rem 0;
+  background-color: $white;
+  border-top: 1px solid $grey-300;
+  border-bottom: 1px solid $grey-300;
+
+  & > * {
+      &:first-child {
+      margin-right: 2rem;
+    }
+  }
+
+  a, p {
+    font-size: $font-size-md;
+    line-height: 1.5rem;
+    font-weight: $font-weight-bold;
+  }
+  
+  @media(max-width: 960px) {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 2.25rem;
+
+    & > * {
+        &:first-child {
+        margin-right: 0;
+        margin-bottom: 1rem;
+      }
+    }
+    
+    a, p {
+      font-size: $font-size-sm;
+      line-height: 1.25rem;
+      font-weight: $font-weight-bold;
+    }
+
+    a + p {
+      margin-top: 0.75rem;
+    }
+  }
+}

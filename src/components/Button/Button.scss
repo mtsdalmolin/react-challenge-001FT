@@ -1,0 +1,20 @@
+@import '../../styles/colors.scss';
+@import '../../styles/fonts.scss';
+
+button {
+  padding: 12px 22px;
+  margin-left: auto;
+  background: $primary;
+  color: $white;
+  font-size: $font-size-sm;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &.error {
+    background: $error;
+  }
+
+  &:hover {
+    opacity: 0.95;
+  }
+}

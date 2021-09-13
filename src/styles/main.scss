@@ -1,0 +1,30 @@
+@import './colors';
+@import './fonts';
+
+* {
+  margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+  overflow-x: unset;
+}
+
+body {
+  background-color: $grey-100;
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.divider {
+  width: min(80vw, 49rem);
+  margin: auto;
+  border-top: 2px solid $grey-300;
+  overflow-x: hidden;
+}
+
+a {
+  color: $secondary;
+}
