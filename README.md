@@ -8,6 +8,22 @@
 #### Mobile
 ![Mobile screenshot](docs/mobile.png)
 
+## Instructions
+I'm experiencing Vite lately, and I thought it was a good choice to use in this code challenge. Vite has a faster development environment compared to Webpack and Parcel, and it's a lot lighter as well.
+
+In order to open development environment, run:
+```
+  yarn dev
+```
+
+Vite has it's own serve script. So, to build the application and serve static files, run:
+```
+  yarn build
+  yarn serve
+```
+
+
+
 ## Description
 
 **Challenge goal**: The purpose of this challenge is to give a general idea of how React works and how you can use it to create simple reactive applications. You’ll be implementing a simplified version of Hapu’s ‘Become a Nanny Share Host’ view. The concepts that you’re gonna apply are:
